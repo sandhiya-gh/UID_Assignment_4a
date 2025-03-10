@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmPassword = document.getElementById("confirmPassword");
     const output = document.getElementById("output");
 
-    // Automatically calculate age when date of birth is selected
     dobInput.addEventListener("change", function () {
         const dob = new Date(dobInput.value);
         const today = new Date();
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         output.innerHTML = ""; // Clear previous messages
 
-        // Form validation
         const firstName = document.getElementById("firstName").value.trim();
         const lastName = document.getElementById("lastName").value.trim();
         const email = document.querySelector("input[type=email]").value.trim();
@@ -39,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Display user input (for demonstration purposes)
         output.innerHTML = `
             <strong>Application Submitted Successfully!</strong><br>
             Name: ${firstName} ${lastName} <br>
